@@ -49,5 +49,19 @@ class BreweriesController extends AppController {
 		$this->setLayout('echo');
 		$this->setVar('results', $results);
 	}
+	
+	/**
+     * api.openbeerdb.com/breweries/count
+     * @author hoke
+     * This function returns the number of brewery records
+     */
+    public function actionCount() {
+        $breweriesModel = new breweriesModel();
+        
+        $results = $breweriesModel->countBreweries();
+
+        $this->setLayout('echo');
+        $this->setVar('results', $results);
+    }
 }
 ?>

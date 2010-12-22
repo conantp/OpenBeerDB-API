@@ -33,8 +33,8 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 				<h4>Parameters</h4>
 				<div class="params">
-					<div class="param">limit - (optional) limits the amount of results returned. default: 50</div>
-					<div class="param">offset - (optional) offsets the result set returned. default: 0</div>
+					<div class="param"><b>limit</b> - (optional) limits the amount of results returned. default: 50</div>
+					<div class="param"><b>offset</b> - (optional) offsets the result set returned. default: 0</div>
 				</div>
 				<h4>Example</h4>
 				<div class="example">
@@ -53,9 +53,9 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 				<h4>Parameters</h4>
 				<div class="params">
-					<div class="param">id - the desired beer's id</div>
-					<div class="param">name - the desired beer's name</div>
-					<div class="param">brewery_id - the desired beers' brewery, by id</div>
+					<div class="param"><b>id</b> - the desired beer's id</div>
+					<div class="param"><b>name</b> - the desired beer's name</div>
+					<div class="param"><b>brewery_id</b> - the desired beers' brewery, by id</div>
 				</div>
 				<h4>Example</h4>
 				<div class="example">
@@ -65,6 +65,19 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 			</div>
 		</div>
+		<!-- count -->
+        <div class="function">
+            <h3>count</h3>
+            <div class="expanding">
+                <div class="descript">
+                    Returns the number of beer records, in JSON format. No parameters are required.
+                </div>
+                <h4>Example</h4>
+                <div class="example">
+                    {api_url}/beers/count<br/>
+                </div>
+            </div>
+        </div>
 		<!-- search -->
         <div class="function">
             <h3>search</h3>
@@ -74,8 +87,8 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
                 </div>
                 <h4>Parameters</h4>
                 <div class="params">
-                    <div class="param">type - the type of search: 'starts_with' or 'contains'. default: 'starts_with'</div>
-                    <div class="param">name - the beer name search string</div>
+                    <div class="param"><b>type</b> - the type of search: 'starts_with' or 'contains'. default: 'starts_with'</div>
+                    <div class="param"><b>name</b> - the beer name search string</div>
                 </div>
                 <h4>Example</h4>
                 <div class="example">
@@ -97,8 +110,8 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 				<h4>Parameters</h4>
 				<div class="params">
-					<div class="param">limit - (optional) limits the amount of results returned. default: 50</div>
-					<div class="param">offset - (optional) offsets the result set returned. default: 0</div>
+					<div class="param"><b>limit</b> - (optional) limits the amount of results returned. default: 50</div>
+					<div class="param"><b>offset</b> - (optional) offsets the result set returned. default: 0</div>
 				</div>
 				<h4>Example</h4>
 				<div class="example">
@@ -117,8 +130,8 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 				<h4>Parameters</h4>
 				<div class="params">
-					<div class="param">id - the desired brewery's id</div>
-					<div class="param">name - the desired brewery's name</div>
+					<div class="param"><b>id</b> - the desired brewery's id</div>
+					<div class="param"><b>name</b> - the desired brewery's name</div>
 				</div>
 				<h4>Example</h4>
 				<div class="example">
@@ -128,6 +141,19 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 			</div>
 		</div>
+		<!-- count -->
+        <div class="function">
+            <h3>count</h3>
+            <div class="expanding">
+                <div class="descript">
+                    Returns the number of brewery records, in JSON format. No parameters are required.
+                </div>
+                <h4>Example</h4>
+                <div class="example">
+                    {api_url}/breweries/count<br/>
+                </div>
+            </div>
+        </div>
 	</div>
 	<!-- Categories -->
 	<div class="resource">
@@ -141,8 +167,8 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 				<h4>Parameters</h4>
 				<div class="params">
-					<div class="param">limit - (optional) limits the amount of results returned. default: 50</div>
-					<div class="param">offset - (optional) offsets the result set returned. default: 0</div>
+					<div class="param"><b>limit</b> - (optional) limits the amount of results returned. default: 50</div>
+					<div class="param"><b>offset</b> - (optional) offsets the result set returned. default: 0</div>
 				</div>
 				<h4>Example</h4>
 				<div class="example">
@@ -161,8 +187,8 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 				<h4>Parameters</h4>
 				<div class="params">
-					<div class="param">id - the desired category's id</div>
-					<div class="param">name - the desired category's name</div>
+					<div class="param"><b>id</b> - the desired category's id</div>
+					<div class="param"><b>name</b> - the desired category's name</div>
 				</div>
 				<h4>Example</h4>
 				<div class="example">
@@ -186,9 +212,9 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				</div>
 				<h4>Parameters</h4>
 				<div class="params">
-					<div class="param">id - the desired style's id</div>
-					<div class="param">name - the desired style's name</div>
-					<div class="param">category_id - the desired styles' category, by id</div>
+					<div class="param"><b>id</b> - the desired style's id</div>
+					<div class="param"><b>name</b> - the desired style's name</div>
+					<div class="param"><b>category_id</b> - the desired styles' category, by id</div>
 				</div>
 				<h4>Example</h4>
 				<div class="example">
@@ -208,12 +234,3 @@ $(document).ready(function() {
 	});
 });
 </script>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-16271718-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>

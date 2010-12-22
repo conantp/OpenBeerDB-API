@@ -60,6 +60,15 @@ class breweriesModel {
 		}
 		return $set;
 	}
+	
+    public function countBreweries(){
+        $query = sprintf("SELECT id FROM breweries");
+        $results = $this->db->query($query);
+
+        return array("count" => $results->num_rows);
+    }
+
+	
 }
 
 ?>
