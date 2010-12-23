@@ -61,6 +61,30 @@ class breweriesModel {
 		return $set;
 	}
 	
+    public function getGeocode($name, $id){
+        if ($name) {
+          // get the brewery's id by name
+          $r = $this->db->query(sprintf("SELECT id FROM breweries WHERE name = '%s'", $name));
+          $id_row = $r->fetch_array();
+          $id = $id_row['id'];
+          
+          $query = sprintf("SELECT brewery_id, latitude, longitude, 
+            accuracy FROM breweries_geocode WHERE brewery_id = '%s'", $id);  
+        } else {
+          $query = sprintf("SELECT brewery_id, latitude, longitude, 
+            accuracy FROM breweries_geocode WHERE brewery_id = '%s'", $id);  
+        }
+        $results = $this->db->query($query);
+        
+        $set = array();
+        if ($results->num_rows > 0){
+            while ($row = $results->fetch_array(MYSQLI_ASSOC)) {
+                $set[] = $row;
+            }
+        }
+        return $set;
+    }
+	
     public function countBreweries(){
         $query = sprintf("SELECT id FROM breweries");
         $results = $this->db->query($query);

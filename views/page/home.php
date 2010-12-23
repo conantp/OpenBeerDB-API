@@ -125,7 +125,7 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 			<h3>get</h3>
 			<div class="expanding">
 				<div class="descript">
-					Returns a brewery, ordered by id, in JSON format. Supplying only one of 
+					Returns a brewery, in JSON format. Supplying only one of 
 					the two parameters is required.
 				</div>
 				<h4>Parameters</h4>
@@ -137,10 +137,29 @@ $this->setLayoutVar('pageTitle', 'API - The Open Beer Database');
 				<div class="example">
 					{api_url}/breweries/get?id={id}<br/>
 					{api_url}/breweries/get?name={name}<br/>
-					{api_url}/breweries/get?brewery_id={brewery_id}
 				</div>
 			</div>
 		</div>
+		<!-- geocode -->
+        <div class="function">
+            <h3>geocode</h3>
+            <div class="expanding">
+                <div class="descript">
+                    Returns a brewery geocode information, in JSON format. Supplying only one of 
+                    the two parameters is required.
+                </div>
+                <h4>Parameters</h4>
+                <div class="params">
+                    <div class="param"><b>id</b> - the brewery's id</div>
+                    <div class="param"><b>name</b> - the brewery's name</div>
+                </div>
+                <h4>Example</h4>
+                <div class="example">
+                    {api_url}/breweries/geocode?id={id}<br/>
+                    {api_url}/breweries/geocode?name={name}<br/>
+                </div>
+            </div>
+        </div>
 		<!-- count -->
         <div class="function">
             <h3>count</h3>

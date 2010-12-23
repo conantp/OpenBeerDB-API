@@ -50,6 +50,30 @@ class BreweriesController extends AppController {
 		$this->setVar('results', $results);
 	}
 	
+    /**
+     * api.openbeerdb.com/breweries/geocode
+     * @author hoke
+     * @param id (int) via GET
+     * @param name (int) via GET
+     * This function gets a brewery by id or name
+     */
+    public function actionGeocode() {
+        $id = $this->get['id'];
+        $name = urldecode($this->get['name']);
+        
+        $breweriesModel = new breweriesModel();
+        
+        if ($id || $name){
+            $results = $breweriesModel->getGeocode($name, $id);
+        } else {
+            //throw appropriate error here
+            exit('required: id or name');
+        }
+
+        $this->setLayout('echo');
+        $this->setVar('results', $results);
+    }
+	
 	/**
      * api.openbeerdb.com/breweries/count
      * @author hoke
